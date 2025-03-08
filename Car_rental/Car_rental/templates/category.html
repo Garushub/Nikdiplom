@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Категория: {{ category }}{% endblock %}
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container">
+    <h1 class="my-4" style="color: #007bff;">Категория: {{ category }}</h1>
+    <div class="row">
+        {% for car in cars %}
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 car-card" data-aos="fade-up">
+                <img class="card-img-top" src="{{ url_for('static', filename='uploads/' + car['фото']) }}" alt="{{ car['название'] }}">
+                <div class="card-body">
+                    <h4 class="card-title">{{ car['название'] }}</h4>
+                    <p class="card-text">Категория: {{ car['категория'] }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ url_for('car_detail', car_id=car['id']) }}" class="btn btn-primary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary my-4">Вернуться к списку</a>
+</div>
+{% endblock %}

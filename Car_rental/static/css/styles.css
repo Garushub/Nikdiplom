@@ -1,0 +1,71 @@
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.header h1, .footer p {
+    margin: 0;
+}
+
+.navbar {
+    margin-bottom: 20px;
+    background-color: #343a40;
+}
+
+.nav-link, .navbar-brand {
+    color: #ffffff !important;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.list-group-item a {
+    color: #343a40;
+    text-decoration: none;
+}
+
+.list-group-item a:hover {
+    color: #007bff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.car-card {
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+}
+
+.content {
+    flex: 1;
+}
